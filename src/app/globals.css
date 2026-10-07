@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+:root {
+  --bg-dark: #030712;
+  --bg-card: #0b1329;
+  --bg-card-hover: #131f40;
+  --gold-primary: #c5a059;
+  --gold-light: #f3d884;
+  --purple-deep: #1e1035;
+  --cream-light: #ffffff;
+  --text-muted: #cbd5e1;
+}
+
+body {
+  background-color: #030712;
+  color: #f8fafc;
+  font-family: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-serif-title {
+  font-family: var(--font-cinzel), Georgia, serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
+
+/* Glassmorphism card utilities - High Readability */
+.glass-panel {
+  background: rgba(11, 19, 41, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(19, 31, 64, 0.92);
+  border-color: rgba(197, 160, 89, 0.5);
+  box-shadow: 0 12px 36px -5px rgba(197, 160, 89, 0.15);
+  transform: translateY(-2px);
+}
+
+/* High Contrast Text Gradient */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #f3d884 40%, #c5a059 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #f3d884 0%, #c5a059 70%, #9e7d36 100%);
+}
+
+.gold-gradient-bg:hover {
+  background: linear-gradient(135deg, #fff0aa 0%, #d4af37 70%, #b8931c 100%);
+}
+
+/* Cosmic Deep Space Background Overlay */
+.bg-cosmic {
+  background-color: #030712;
+  background-image: 
+    radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 70%, rgba(147, 51, 234, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.05) 0%, transparent 70%);
+}
+
+/* Starry background effect */
+.bg-stars {
+  background-image: 
+    radial-gradient(1.5px 1.5px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 70px 120px, rgba(243, 216, 132, 0.9), rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 150px 60px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 220px 190px, rgba(147, 197, 253, 0.8), rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 110px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 380px 240px, rgba(243, 216, 132, 0.7), rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 400px 300px;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(197, 160, 89, 0.25));
+  }
+  50% {
+    filter: drop-shadow(0 0 35px rgba(197, 160, 89, 0.5));
+  }
+}
+
+.animate-glow {
+  animation: pulseGlow 4s infinite ease-in-out;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 40s linear infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Hide scrollbar for clean horizontal tab sliders */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
