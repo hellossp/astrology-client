@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { useAppState } from "@/context/AppStateContext";
 import { Button } from "@/components/ui/Button";
+import { formatPrice } from "@/utils/formatters";
 import {
   Users,
   Calendar,
@@ -95,7 +96,7 @@ export default function AdminOverviewPage() {
             <span className="text-xs font-semibold">Total Revenue</span>
             <TrendingUp className="w-4 h-4 text-emerald-400" />
           </div>
-          <div className="text-2xl font-extrabold text-amber-300">₹{totalRevenue}</div>
+          <div className="text-2xl font-extrabold text-amber-300">{formatPrice(totalRevenue)}</div>
           <span className="text-[10px] text-emerald-400 font-bold">Ledger Verified</span>
         </div>
 

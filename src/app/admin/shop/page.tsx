@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useAppState } from "@/context/AppStateContext";
 import { Button } from "@/components/ui/Button";
+import { formatPrice } from "@/utils/formatters";
 import { ShoppingBag, Plus, Eye } from "lucide-react";
 
 export default function AdminShopCMSPage() {
@@ -43,7 +44,7 @@ export default function AdminShopCMSPage() {
             </div>
 
             <div className="pt-3 mt-3 border-t border-slate-800 flex items-center justify-between">
-              <span className="text-sm font-extrabold text-amber-300">₹{p.estimatedPrice}</span>
+              <span className="text-sm font-extrabold text-amber-300">{formatPrice(p.estimatedPrice)}</span>
               <Button variant="outline" size="sm" icon={<Eye className="w-3.5 h-3.5" />}>
                 Preview
               </Button>

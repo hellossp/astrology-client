@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useAppState } from "@/context/AppStateContext";
 import { Button } from "@/components/ui/Button";
+import { formatPrice } from "@/utils/formatters";
 import { Modal } from "@/components/ui/Modal";
 import { Users, Eye, Search, Calendar, Phone, Mail, UserCheck, UserX } from "lucide-react";
 
@@ -119,7 +120,7 @@ export default function AdminCustomersPage() {
                         <div>{apt.serviceTitle}</div>
                         <div className="text-slate-400 text-[10px]">{apt.date}</div>
                       </div>
-                      <span className="text-amber-300 font-bold">₹{apt.amount}</span>
+                      <span className="text-amber-300 font-bold">{formatPrice(apt.amount)}</span>
                     </div>
                   ))}
               </div>
