@@ -46,7 +46,7 @@ export default function HomePage() {
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               {/* Top Category Label */}
               <div className="text-slate-400 text-sm font-medium tracking-wide">
-                AI-Powered Astrology & Vedic Wisdom
+                Authentic Vedic Astrology & Cosmic Guidance
               </div>
 
               {/* Main Headline - Serif Title matching reference image */}
@@ -67,7 +67,7 @@ export default function HomePage() {
 
               {/* Subtitle Lines */}
               <div className="space-y-1 text-slate-300 text-sm sm:text-base font-normal max-w-xl mx-auto lg:mx-0">
-                <p>AI-Driven Personalized Readings & Ancient Calculations</p>
+                <p>Precision Planetary Readings & Ancient Vedic Calculations</p>
                 <p className="text-slate-400">Explore Interactive Birth Charts, Dasha Periods and Zodiac Reports</p>
               </div>
 
